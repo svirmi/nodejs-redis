@@ -6,6 +6,7 @@ services:
     image: 'redis'
 
   node-app:
+    restart: always
     build: .
     ports:
     - "4001:8081"  # local machine port : container port

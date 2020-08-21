@@ -14,3 +14,5 @@ docker-compose up --build
 ```bash
 docker-compose up -d
 ```
+
+##### App is running at http://0.0.0.0:4001/
