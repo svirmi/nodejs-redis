@@ -1,18 +1,14 @@
 ##### Docker Compose with multiple local containers
-##### node.js + redis
+##### node.js (React) + redis
 
 ##### To build image run
 ```bash
-docker build -t node-redis .
+docker build -f Dockerfile.dev .
 ```
 
-##### To build and run the container use this command
+##### Just to run built image use
 ```bash
-docker-compose up --build
-```
-##### Just to run built app use
-```bash
-docker-compose up -d
+docker run -it -p 3001:3000 <CONTAINERID fcafb0470bac>
 ```
 
-##### App is running at http://0.0.0.0:4001/
+##### App is running at http://localhost:3001/
