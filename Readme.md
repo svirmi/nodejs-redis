@@ -20,5 +20,5 @@ docker run -it <CONTAINERID fcafb0470bac> yarn test
 
 ##### Running container with volumes mapping and live code chagging detection:
 ```bash
-docker run -it -p 3000:3000 -v /app/node_modules -v $(pwd):/app 18403a4bf0dd
+docker run --rm -it -p 3000:3000 -v /app/node_modules -v $(pwd):/app 18403a4bf0dd
 ```
