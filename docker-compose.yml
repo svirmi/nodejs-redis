@@ -2,12 +2,14 @@ version: '3'
 
 services:
 
-  redis-server:
-    image: 'redis'
-
-  node-app:
-    restart: always
-    build: .
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
     ports:
-    - "4001:8081"  # local machine port : container port
+    - "3000:3000"  # local machine port : container port
+    volumes:
+    - /app/node_modules
+    - .:/app
+
 

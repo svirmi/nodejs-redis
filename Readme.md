@@ -6,9 +6,19 @@
 docker build -f Dockerfile.dev .
 ```
 
-##### Just to run built image use
+##### Just to run built container use
 ```bash
-docker run -it -p 3001:3000 <CONTAINERID fcafb0470bac>
+docker run -it -p 3000:3000 <CONTAINERID fcafb0470bac>
 ```
 
-##### App is running at http://localhost:3001/
+##### App is running at http://localhost:3000/
+
+##### To run tests inside a container:
+```bash
+docker run -it <CONTAINERID fcafb0470bac> yarn test
+```
+
+##### Running container with volumes mapping and live code chagging detection:
+```bash
+docker run -it -p 3000:3000 -v /app/node_modules -v $(pwd):/app 18403a4bf0dd
+```
