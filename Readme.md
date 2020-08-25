@@ -22,3 +22,7 @@ docker run -it node-redis yarn test
 ```bash
 docker run --rm -it -p 3000:3000 -v /app/node_modules -v $(pwd):/app node-redis
 ```
+##### or just 
+```bash
+docker-compose up -d
+```
