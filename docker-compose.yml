@@ -13,3 +13,6 @@ services:
     - .:/app
     stdin_open: true
 
+  redis-server:
+    image: 'redis'
+
